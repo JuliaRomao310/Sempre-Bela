@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Horário - SempreBela</title>
+    <link rel="stylesheet" href="marcar.css">
+    <link rel = "icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo Sempre Bela" width="120">
+        <div>
+            <h1>Marcar Horário</h1>
+            <h2>Escolha o dia, o Horário e finalize seu agendamento</h2>
+            <h2 id="servicoSelecionado"></h2>
+        </div>
+        <a href="index.html"><button>Início</button></a>
+        <a href="meusHorarios.html"><button>Meus Horários</button></a>
+    </header> 
+    <main>
+        <section>
+            <h2><strong>Escolha o Dia</strong></h2>
+            <div id="dias" class="grid"></div>
+        </section>
+
+        <section>
+            <h2><strong>Escolha o Horário</strong></h2>
+            <div id="horarios" class="grid"></div>
+        </section>
+
+        <section id="formulario" style="display: none;">
+            <h2><strong>Confirmar Agendamento</strong></h2>
+            <div class="form-card">
+                <label>Nome:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome completo">
+
+                <label>Telefone:</label>
+                <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX">
+
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="exemplo@gmail.com">
+
+                <button class="btnConfirmar" onclick="confirmar()">Confirmar Horário</button>
+            </div>
+        </section>
+    </main> 
+    <footer> 
+        <p>Contato: (11) 99999-5555</p>
+        <p>© 2025 Sempre Bela - Todos os direitos reservados.</p>
+    </footer>
+
+<script src="marcar.js"></script>
+</body>
+</html>

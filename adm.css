@@ -1,0 +1,14 @@
+body { background: #7a1c5b; color: white; font-family: Arial, sans-serif; margin:0; }
+header { display:flex; gap:15px; align-items:center; padding:18px; }
+header h1, header p { color:#937207; margin:0; }
+.loginArea { padding:20px; display:flex; gap:10px; align-items:center; }
+.loginArea input { padding:10px; border-radius:8px; border:2px solid #937207; }
+.btnLogin { background:#937207; padding:10px 14px; border-radius:8px; border:none; cursor:pointer; }
+.controls { padding:20px; }
+.lista { display:grid; gap:14px; padding:20px; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); }
+.card { background:#ffffff15; padding:14px; border-radius:12px; }
+.card h3 { color:#ffd86b; margin:0 0 8px 0; }
+.card p { margin:4px 0; }
+.card .acoes { margin-top:10px; display:flex; gap:10px; }
+.btnAtendido { background:#2b8a2b; color:white; border:none; padding:10px; border-radius:10px; cursor:pointer; flex:1; }
+.btnCancelar { background:#c24242; color:white; border:none; padding:10px; border-radius:10px; cursor:pointer; flex:1; }

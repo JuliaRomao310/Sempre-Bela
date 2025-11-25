@@ -1,0 +1,63 @@
+body{
+    background-color: #7a1c5b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+    
+}
+header h1{
+    color: #937207;
+}
+header a button{
+    margin-left: auto;
+    padding: 10px 20px ;
+    background-color: #937207;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-card{
+    background-color:#ffffff15 ;
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: laft;
+}
+.form-card h2{
+    color: #937207;
+    text-align: center;
+}
+.form-card label{
+    display: block ;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.form-card input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    background: #f3f6ff;
+}
+.btnEntrar{
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    background-color: #937207;
+    color: white;
+    cursor: pointer;
+}
+.btnEntrar:hover{
+    background-color: #b38f0d;
+}

@@ -1,0 +1,97 @@
+body{
+    background-color: #7a1c5b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: flex; 
+    align-items: center; 
+    gap: 20px;
+    
+}
+header h1,
+header h2 {
+    color: #937207;
+    margin: 0;
+}
+header a button {
+    margin-top: 0px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #937207;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.grid button{
+    padding: 20px;
+    background-color: #ffffff20;
+    border: 2px solid #937207;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.grid button:hover{
+    background-color: #937207;
+}
+.form-card{    
+    background-color: #ffffff10;
+    padding: 25px;
+    border-radius: 20px;
+    width: 420px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px #00000030;
+
+}
+.form-card label{
+    font-size: 18px;
+    margin-top: 12px;
+    display: block;
+    color: #ffd86b;
+    font-weight: bold;
+}
+
+.form-card input{
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ffffffd0;
+    color: #222;
+    border: 2px solid #937207;
+    border-radius: 12px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-card input:focus{
+    border-color: #bfa73a;
+    box-shadow: 0 0 6px #bfa73a;
+}
+
+.btnConfirmar{
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #937207;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnConfirmar:hover{
+    background-color: #bfa73a;
+}

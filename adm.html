@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Paineladm - SempreBela</title>
+  <link rel = "icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="adm.css">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo" width="120">
+    <div>
+      <h1>Painel da Administração</h1>
+      <p>Visualize todos os agendamentos do salão.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="loginArea" id="loginArea">
+      <label>Senha da proprietária:</label>
+      <input id="adminSenha" type="password" placeholder="Senha">
+      <button id="btnLogin" class="btnLogin">Entrar</button>
+    </section>
+
+    <section id="painel" style="display:none;">
+      <div class="controls">
+        <button id="btnRefresh" class="btnBuscar">Atualizar</button>
+      </div>
+      <div id="listaPainel" class="lista"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Sempre Bela</p>
+  </footer>
+
+  <script src="adm.js"></script>
+</body>
+</html>
+
