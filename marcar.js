@@ -1,3 +1,4 @@
+console.log("marcar.js carregado");
 let servico = localStorage.getItem("servicoSelecionado");
 let diasSelecionados = JSON.parse(localStorage.getItem("diasSelecionados")) || [];
 let horarioSelecionado = localStorage.getItem("horarioSelecionado");
