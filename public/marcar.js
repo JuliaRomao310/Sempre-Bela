@@ -1,5 +1,5 @@
 console.log("marcar.js carregado");
-document.URL.substring(51, document.length).replace("%20", " ").replace("%20", " ")
+let servico = document.URL.substring(51, document.length).replace("%20", " ").replace("%20", " ")
 let diasSelecionados = JSON.parse(localStorage.getItem("diasSelecionados")) || [];
 let horarioSelecionado = localStorage.getItem("horarioSelecionado");
 
