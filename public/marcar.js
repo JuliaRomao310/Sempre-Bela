@@ -19,7 +19,7 @@ async function confirmar() {
     try {
         const res = await fetch("/api/agendamento", {
             method: "POST",
-            headers: { "Content-Type": "https://semprebela-api.node.js/api/agendamento" },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 nome,
                 telefone,
