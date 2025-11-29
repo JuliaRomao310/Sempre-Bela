@@ -21,7 +21,7 @@ app.post("/api/agendamento", (req, res) => {
     }
 
     // 1) Verificar se cliente existe pelo telefone
-    db.query("SELECT id FROM clientes WHERE telefone = ?", [telefone], (err, clienteRet) => {
+    connection.query("SELECT id FROM clientes WHERE telefone = ?", [telefone], (err, clienteRet) => {
         if (err) return res.status(500).json(err);
 
         if (clienteRet.length > 0) {
@@ -29,7 +29,7 @@ app.post("/api/agendamento", (req, res) => {
             criarAgendamento(clienteRet[0].id);
         } else {
             // cadastra cliente novo
-            db.query(
+            connection.query(
                 "INSERT INTO clientes (nome, telefone, email) VALUES (?, ?, ?)",
                 [nome, telefone, email],
                 (err, insert) => {
@@ -43,14 +43,14 @@ app.post("/api/agendamento", (req, res) => {
     // Função interna para continuar o processo
     function criarAgendamento(cliente_id) {
         // 2) Buscar ID do serviço a partir do nome enviado
-        db.query("SELECT id FROM servicos WHERE nome = ?", [servico], (err, servicoRet) => {
+        connection.query("SELECT id FROM servicos WHERE nome = ?", [servico], (err, servicoRet) => {
             if (err) return res.status(500).json(err);
             if (servicoRet.length === 0) return res.status(404).json({ erro: "Serviço não encontrado" });
 
             const servico_id = servicoRet[0].id;
 
             // 3) Registrar agendamento
-            db.query(
+            connection.query(
                 "INSERT INTO agendamentos (cliente_id, servico_id, data_agendada, horario) VALUES (?, ?, ?, ?)",
                 [cliente_id, servico_id, data, horario],
                 (err, resultado) => {
@@ -67,14 +67,14 @@ app.get("/api/agendamentos/cliente/:telefone", (req, res) => {
     const { telefone } = req.params;
 
     // 1) localizar o cliente pelo telefone
-    db.query("SELECT id, nome FROM clientes WHERE telefone = ?", [telefone], (err, clienteRet) => {
+    connection.query("SELECT id, nome FROM clientes WHERE telefone = ?", [telefone], (err, clienteRet) => {
         if (err) return res.status(500).json(err);
         if (clienteRet.length === 0) return res.json([]); // nenhum cliente encontrado = nenhum horário
 
         const cliente_id = clienteRet[0].id;
 
         // 2) buscar todos os horários vinculados a ele com o nome do serviço
-        db.query(`
+        connection.query(`
             SELECT a.data_agendada, a.horario, s.nome AS servico 
             FROM agendamentos a
             JOIN servicos s ON s.id = a.servico_id
