@@ -8,14 +8,14 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (_, res) => {
- 
+    
     res.redirect('/index.html');
- 
+    
 });
 
 app.post("/api/agendamento", (req, res) => {
     const { nome, telefone, email, servico, data, horario } = req.body;
-
+    
     if (!nome || !telefone || !servico || !data || !horario) {
         return res.status(400).json({ erro: "Dados incompletos." });
     }
@@ -87,7 +87,8 @@ app.get("/api/agendamentos/cliente/:telefone", (req, res) => {
     });
 });
 
-
-app.listen(3000, () => {console.log("\nServidor Rodando!");
- 
+app.listen(3000, () => {
+    
+    console.log("\nServidor Rodando!");
+    
 });

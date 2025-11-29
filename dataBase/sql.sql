@@ -4,13 +4,13 @@ USE sempreBela;
 CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    telefone VARCHAR(20) NOT NULL UNIQUE
+    telefone VARCHAR(20) NOT NULL UNIQUE,
+    email VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE servicos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
     preco DECIMAL(10,2) NOT NULL
 );
 
@@ -30,3 +30,13 @@ CREATE TABLE proprietaria (
     usuario VARCHAR(50) NOT NULL,
     senha VARCHAR(100) NOT NULL
 );
+
+INSERT INTO servicos (nome, preco) VALUES ('Corte de Cabelo', 45.00);
+INSERT INTO servicos (nome, preco) VALUES ('Tintura de Cabelo', 45.00);
+INSERT INTO servicos (nome, preco) VALUES ('Hidratação', 40.00);
+INSERT INTO servicos (nome, preco) VALUES ('Escova', 40.00);
+INSERT INTO servicos (nome, preco) VALUES ('Sombrancelha', 25.00);
+INSERT INTO servicos (nome, preco) VALUES ('Manicure', 25.00);
+INSERT INTO servicos (nome, preco) VALUES ('Pedicure', 25.00);
+INSERT INTO servicos (nome, preco) VALUES ('Combo Pé e Mão', 50.00);
+INSERT INTO servicos (nome, preco) VALUES ('Combo Tintura + Escova', 80.00);
